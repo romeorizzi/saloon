@@ -1,0 +1,51 @@
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THEREE = 3;
+const FOUR = 4;
+const FIVE = 5;
+const SIX = 6;
+const SEVEN = 7;
+const EIGHT = 8;
+const NINE = 9;
+const COMMA = -1;
+
+// Encoding functions:
+procedure get_original_string(string_length, string_over_alphabet_0123456789comma[]);
+function tell_encoded_string_length();
+function tell_encoded_string_ith_char(i);
+
+// Decoding functions:
+procedure get_encoded_string(string_length, string_over_reduced_alphabet[]);
+function tell_original_string_length();
+function tell_original_string_ith_char(i);
+
+
+main {
+    read choice;
+    if choice {
+        read N;
+        for i to N {
+            read original_string[i];
+        }
+	call get_original_string(N, original_string);
+        call blown_up_N = tell_encoded_string_length();
+        write blown_up_N;
+        for i to blown_up_N {
+	    call one_key = tell_encoded_string_ith_char(i);
+            write one_key;
+        }
+    } else {
+        read blown_up_N;
+        for i to blown_up_N {
+            read encoded_string[i];
+        }
+	call get_encoded_string(blown_up_N, encoded_string);
+        call original_N = tell_original_string_length();
+        write original_N;
+        for i to original_N {
+	    call one_key = tell_original_string_ith_char(i);
+            write one_key;
+        }
+    }
+}

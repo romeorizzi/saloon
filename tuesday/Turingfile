@@ -1,0 +1,9 @@
+[problem]
+title = "Saloon: Tuesday, back to work but the `6` key is missing"
+
+[scoring]
+goals = [
+    "correct",
+    "correct_C_is_2",
+    "correct_C_is_1dot1",
+]

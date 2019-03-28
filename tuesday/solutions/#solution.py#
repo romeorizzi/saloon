@@ -1,0 +1,35 @@
+
+
+original_string = None
+encoding_string = None
+
+def get_original_string(string_length, string_over_alphabet_0123456789comma):
+    nonlocal encoding_string
+    seq_of_positive_naturals = []
+    next_val = 0
+    for char in string_over_alphabet_0123456789comma:
+        if char != -1:
+            next_val = 10*next_val + char
+        else:
+            seq_of_positive_naturals.append(next_val)
+            next_val = 0
+    seq_of_positive_naturals.append(next_val)
+    next_val = 0
+
+            
+def tell_encoding_string_length():
+    return len(encoding_string)
+
+def tell_encoding_string_ith_char(i):
+    return encoding_string(i)
+
+def get_encoded_string(string_length, string_over_reduced_alphabet):
+    # TODO
+    pass
+
+def tell_original_string_length():
+    return len(original_string)
+
+def tell_original_string_ith_char(i):
+    return original_string(i)
+
