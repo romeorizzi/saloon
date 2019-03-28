@@ -1,0 +1,7 @@
+[problem]
+title = "Integers are numerable"
+
+[scoring]
+goals = [
+    "correct",
+]

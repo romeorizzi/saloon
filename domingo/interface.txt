@@ -1,0 +1,22 @@
+function encode_finite_seq(n, seq_of_n_positive_nats[]);
+function decode_seq_tell_length(one_single_encoding_natural);
+function decode_seq_tell_ith(one_single_encoding_natural,i);
+
+main {
+    read choice;
+    if choice {
+        read N;
+        for i to N {
+            read seq[i];
+        }
+        call encoding = encode_finite_seq(N, seq);
+        write encoding;
+    } else {
+        read encoding;
+        call N = decode_seq_tell_length(encoding);
+        for i to N {
+	    call val = decode_seq_tell_ith(encoding,i);
+            write;
+        }
+    }
+}

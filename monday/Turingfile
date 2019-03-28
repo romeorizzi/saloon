@@ -1,0 +1,9 @@
+[problem]
+title = "Saloon: your first day at work!"
+
+[scoring]
+goals = [
+    "correct",
+    "correct_C_is_2",
+    "correct_C_is_1",
+]
